@@ -1,0 +1,48 @@
+1. HTTP 状态码
+
+200
+201
+204 Empty
+301 永久重定向
+302 临时重定向
+304 Not Changed
+307 保持请求方法
+403
+404
+503
+5XX
+
+2. Expires、E-Tag、Cache-Conrtol 区别
+
+3. 常见攻击类型
+
+4. XSS 防范
+
+5. 跨域防范
+
+6. HTTPS
+
+7. 对称加密和非对称加密
+
+8. HTTP2
+
+9. 框架
+
+10. TypeScript 工作原理
+
+11. 性能优化
+
+Script 放最后/async
+CSS 放在 HEAD 里
+JS 异步
+CSS 选择器从右到左
+代码压缩、GZIP
+AJAX
+缓存
+LazyLoad、Progressive JPEG
+代码合并
+etc.
+
+12. 冒泡、事件代理；如何阻止继续冒泡
+
+13. Project Specific Questions
