@@ -2,6 +2,14 @@
 
 using namespace std;
 
+/**
+一、环形缓冲区，又称为环形队列，是一种定长为 N 的先进先出的数据结构。它在进程间的异步数据传输或记录日志文件时十分有用。环形缓冲区通常有一个读指针和一个写指针，读指针指向环形缓冲区中可读的数据，写指针指向环形缓冲区中可写的缓冲区，通过移动读指针和写指针就可以实现缓冲区的数据读取和写入。
+请用数组实现一个环形缓冲区，支持以下操作：
+1. 环形缓冲区初始化时支持指定缓冲区最大容量
+2. int take(): 从缓冲区读指针位置读取数据（总为正数），如果没有数据可读返回 -1
+3. boolean put(int value): 写入数据（总为正数）到缓冲区，容量不足无法写入返回 false，写入成功返回 true
+*/
+
 template <class T> // T must can compare with int and can cast from int
 class Queue {
 public:
@@ -79,6 +87,12 @@ template <class T> Queue<T> & Queue<T>::operator=(const Queue<T> & queue1) {
 	return *this;
 }
 
+/**
+二、设计和实现一个 LRU（最近最少使用）缓存机制，支持以下操作：
+1. LRUCache 初始化时支持指定缓存最大容量
+2. 获取数据 int get(int key)：如果 key 存在于缓存中，则返回缓存值（总为正数），没有对应缓存则返回 -1
+3. 设置数据 void put(int key, int value): 如果 key 不存在，写入数据值。当缓存容量达到上限时，需淘汰最近最少使用的缓存。
+*/
 
 #include <unordered_map>
 template <class K, class V> // K must can compare with int and can cast from int

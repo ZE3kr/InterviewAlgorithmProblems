@@ -6,6 +6,16 @@
 <body>
 <p id="data"></p>
 <script>
+	/*
+三、（加分题）有一个可信域名列表配置，如['http://mp.weixin.qq.com', 'https://*.xx.com']
+//本题只考虑通配符为 * 的情况
+实现函数
+
+function isValidDomain(url, allowPort) {
+    return boolean
+}
+判断输入的url是否为可信域名，allowPort为true时，url中可以带端口
+	*/
 	let urls = [
 		'https://*.xx.com'];
 	function isValidDomain(url, allowPort) {
