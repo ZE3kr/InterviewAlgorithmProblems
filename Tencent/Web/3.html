@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<title>JavaScript Playground</title>
+</head>
+<body>
+<p id="data"></p>
+<script>
+	let urls = [
+		'https://*.xx.com'];
+	function isValidDomain(url, allowPort) {
+		let result = true;
+		let wildcard = "[a-zA-Z0-9-.]*";
+		for (let i = 0; i < urls.length; i++) {
+			let str = urls[i].replace("*", wildcard);
+			let append = "";
+			if (allowPort) {
+				append = ":[0-9]*";
+			}
+			let re = new RegExp("^" + str + append + "/");
+			if(!re.test(url)) {
+				result = false;
+			}
+		}
+		return result;
+	}
+
+	// 'http://mp.weixin.qq.coma
+	// false
+
+	console.log(isValidDomain('https://a.a.xx.com/', false));
+</script>
+</body>
+</html>
